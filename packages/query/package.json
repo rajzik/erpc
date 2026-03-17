@@ -1,0 +1,37 @@
+{
+  "name": "@erpc/query",
+  "version": "0.0.0",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsdown --config tsdown.config.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "oxlint --config ../../oxlint.json .",
+    "test": "vitest run --config ../../vitest.config.ts",
+    "clean": "rm -rf dist coverage tsconfig.tsbuildinfo"
+  },
+  "dependencies": {
+    "@erpc/client": "workspace:*",
+    "@erpc/core": "workspace:*"
+  },
+  "peerDependencies": {
+    "@tanstack/react-query": "^5.90.21",
+    "react": "^19.2.0"
+  }
+}

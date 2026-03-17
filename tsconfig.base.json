@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "declaration": true,
+    "declarationMap": true,
+    "verbatimModuleSyntax": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "skipLibCheck": true,
+    "moduleDetection": "force",
+    "resolveJsonModule": true,
+    "types": ["node", "vitest/globals"],
+    "paths": {
+      "@erpc/core": ["packages/core/src/index.ts"],
+      "@erpc/server": ["packages/server/src/index.ts"],
+      "@erpc/client": ["packages/client/src/index.ts"],
+      "@erpc/query": ["packages/query/src/index.ts"]
+    }
+  }
+}

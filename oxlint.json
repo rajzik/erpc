@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "error"
+  },
+  "ignorePatterns": ["**/dist/**", "**/coverage/**", "**/*.d.ts"],
+  "overrides": [
+    {
+      "files": ["packages/query/**/*.ts", "packages/query/**/*.tsx"],
+      "plugins": ["typescript", "react"]
+    }
+  ]
+}
